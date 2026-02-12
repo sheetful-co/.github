@@ -2,14 +2,23 @@
   <a href="https://sheetful.co">
     <img src="https://sheetful.co/logotipo.svg" alt="Sheetful Logo" width="120" />
   </a>
-  <h1>🚀 Welcome to Our Organization</h1>
+  <h1>Welcome to Sheetful</h1>
+  <p>
+    <a href="https://app.sheetful.co">
+      <img src="https://img.shields.io/badge/GET%20STARTED-16B364?style=for-the-badge&logo=rocket&logoColor=white" alt="Get Started" />
+    </a>
+    &nbsp;
+    <a href="https://sheetful.co/docs">
+      <img src="https://img.shields.io/badge/DOCUMENTATION-16B364?style=for-the-badge&logo=googledocs&logoColor=white" alt="Documentation" />
+    </a>
+  </p>
 </div>
 
 We focus on building modern and scalable solutions using the latest tech stack. Our flagship project, **Sheetful**, reflects our commitment to quality and performance.
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## Tech Stack & Tools
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -20,28 +29,28 @@ We focus on building modern and scalable solutions using the latest tech stack. 
 
 ---
 
-## 📊 Project Architecture
+## Project Architecture
 
 Below is a simplified flow of how our applications are structured, integrating authentication, payments, and external services.
 
 ```mermaid
 graph LR
-    User["👤 User"] -->|Accesses| Client["🖥️ Frontend (Next.js)"]
+    User["User"] -->|Accesses| Client["Frontend (Next.js)"]
     
     subgraph "Next.js App"
-        Client -->|Requests| API["⚙️ API Routes"]
+        Client -->|Requests| API["API Routes"]
     end
     
     subgraph "Infrastructure"
-        Client -.->|Deployed on| Vercel["☁️ Vercel"]
+        Client -.->|Deployed on| Vercel["Vercel"]
     end
     
     subgraph "External Services"
         direction TB
-        Supabase[("🗄️ Supabase")]
-        Stripe["💳 Stripe"]
-        Resend["📧 Resend"]
-        Google["📑 Google APIs"]
+        Supabase[("Supabase")]
+        Stripe["Stripe"]
+        Resend["Resend"]
+        Google["Google APIs"]
     end
     
     API -->|Auth & Data| Supabase
@@ -60,7 +69,7 @@ graph LR
 
 ---
 
-## 🌟 Featured Projects
+## Featured Projects
 
 ### Sheetful
 Turn your Google Sheets into powerful REST APIs in seconds.
@@ -71,7 +80,7 @@ Turn your Google Sheets into powerful REST APIs in seconds.
 
 ---
 
-## 📫 Contact
+## Contact
 
 Feel free to explore our repositories and contribute!
 
