@@ -1,4 +1,9 @@
-# 🚀 Welcome to Our Organization
+<div align="center">
+  <a href="https://sheetful.co">
+    <img src="https://sheetful.co/logotipo.svg" alt="Sheetful Logo" width="120" />
+  </a>
+  <h1>🚀 Welcome to Sheetful</h1>
+</div>
 
 We focus on building modern and scalable solutions using the latest tech stack. Our flagship project, **Sheetful**, reflects our commitment to quality and performance.
 
@@ -20,27 +25,36 @@ We focus on building modern and scalable solutions using the latest tech stack. 
 Below is a simplified flow of how our applications are structured, integrating authentication, payments, and external services.
 
 ```mermaid
-graph TD
-    User[👤 User] -->|Accesses| Client[🖥️ Frontend (Next.js)]
-    Client -->|API Requests| API[⚙️ API Routes]
+graph LR
+    User["👤 User"] -->|Accesses| Client["🖥️ Frontend (Next.js)"]
     
-    subgraph Backend Services
-        API -->|Auth & Data| Supabase[(🗄️ Supabase)]
-        API -->|Payments| Stripe[💳 Stripe]
-        API -->|Emails| Resend[📧 Resend]
-        API -->|Integration| Google[📑 Google APIs]
+    subgraph "Next.js App"
+        Client -->|Requests| API["⚙️ API Routes"]
     end
     
-    subgraph Deploy
-        Client -.-> Vercel[☁️ Vercel]
+    subgraph "Infrastructure"
+        Client -.->|Deployed on| Vercel["☁️ Vercel"]
     end
+    
+    subgraph "External Services"
+        direction TB
+        Supabase[("🗄️ Supabase")]
+        Stripe["💳 Stripe"]
+        Resend["📧 Resend"]
+        Google["📑 Google APIs"]
+    end
+    
+    API -->|Auth & Data| Supabase
+    API -->|Payments| Stripe
+    API -->|Emails| Resend
+    API -->|Integrations| Google
     
     classDef primary fill:#2563eb,stroke:#1d4ed8,color:white;
     classDef secondary fill:#475569,stroke:#334155,color:white;
     classDef database fill:#059669,stroke:#047857,color:white;
     
     class User,Client primary;
-    class API,Stripe,Resend,Google secondary;
+    class API,Stripe,Resend,Google,Vercel secondary;
     class Supabase database;
 ```
 
@@ -48,12 +62,12 @@ graph TD
 
 ## 🌟 Featured Projects
 
-### Premium SaaS Starter (Sheetful)
-A complete SaaS platform, including:
-- **Authentication** via Supabase
-- **Payments** via Stripe
-- **Integrations** with Google APIs
-- **Landing Page** optimized for conversion
+### Sheetful
+Turn your Google Sheets into powerful REST APIs in seconds.
+- **Instant APIs**: GET, POST, PUT, DELETE endpoints generated automatically.
+- **Secure**: Authentication and role-based access control.
+- **Scalable**: Built on top of Supabase and Vercel.
+
 
 ---
 
